@@ -1,0 +1,26 @@
+Package: SpatGC
+Type: Package
+Title: Functions for Fitting Bayesian Count Spatial Regression Models
+Version: 0.1.0
+Authors@R: c(
+    person("Mahsa", "Nadifar", email = "mahsa.nst@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-9130-125X")),
+    person("Hossein", "Baghishani", email = "hbaghishani@shahroodut.ac.ir", role = "aut", comment = c(ORCID = "0000-0002-6396-0303")),
+    person("Afshin", "Fallah", email = "afshin.ikiu@gmail.com ", role = "ctb", comment = c(ORCID = "0000-0002-1700-365X"))
+    )
+Maintainer: Mahsa Nadifar <mahsa.nst@gmail.com>
+Description: Provides a collection of functions for preparing data and fitting Bayesian count spatial regression models, with a specific focus on the Gamma-Count (GC) model. The GC model is well-suited for modeling dispersed count data, including under-dispersed or over-dispersed counts, or counts with equivalent dispersion, using Integrated Nested Laplace Approximations (INLA). The package includes functions for generating data from the GC model, as well as spatially correlated versions of the model. See Nadifar, Baghishani, Fallah (2023) <doi:10.1007/s13253-023-00550-5>
+License: GPL (>= 2)
+URL: https://github.com/mahsanst/SpatGC
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Depends:
+  R (>= 4.0)
+Imports:
+  mvtnorm,  
+  stats,
+  spdep,
+  sf,
+  sp (>= 2.0-0)
+Suggests:
+  INLA (>= 23.06.15)
