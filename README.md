@@ -1,5 +1,6 @@
 # SpatGC <img src="man/figure/logo.png" align="right" width="25%"/>
 
+<!--
 [![R-CMD-check](https://github.com/mahsanst/SpatGC/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mahsanst/SpatGC/actions/workflows/R-CMD-check.yaml)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/SpatGC)](https://cran.r-project.org/package=SpatGC)
 [![Downloads per
@@ -42,4 +43,5 @@ author = {Mahsa Nadifar and Hossein Baghishani}, year = {2024}, note = {R packag
 
 ## License
 
-This package is free and open source software, licensed under GPL-3.
+This package is free and open-source software, licensed under GPL-3.
+-->
