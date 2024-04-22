@@ -36,7 +36,7 @@ Functions for Fitting Bayesian Count Spatial Regression Models*. R package versi
 
 A BibTeX entry for LaTeX users is
 
-@Manual{SpatGC, title = {SpatGC: Functions for Fitting Bayesian Count Spatial Regression Models},
+@Manual{SpatGC, title = {SpatGC: Bayesian modeling of spatail count data},
 author = {Mahsa Nadifar and Hossein Baghishani}, year = {2024}, note = {R package version 0.1.0}, url =
 {<https://cran.r-project.org/package=SpatGC>} }
 
