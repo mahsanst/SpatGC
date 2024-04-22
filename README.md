@@ -30,14 +30,14 @@ remotes::install_github("mahsanst/SpatGC")
 
 ## To cite package `SpatGC` in publications use:
 
-Nadifar, M., Baghishani, H., Fallah, A. (2024) *SpatGC:
+Nadifar, M., Baghishani, H. (2024) *SpatGC:
 Functions for Fitting Bayesian Count Spatial Regression Models*. R package version 0.1.0,
 <https://cran.r-project.org/package=SpatGC>.
 
 A BibTeX entry for LaTeX users is
 
 @Manual{SpatGC, title = {SpatGC: Functions for Fitting Bayesian Count Spatial Regression Models},
-author = {Mahsa Nadifar and Hossein Baghishani and Afshin Fallah}, year = {2024}, note = {R package version 0.1.0}, url =
+author = {Mahsa Nadifar and Hossein Baghishani}, year = {2024}, note = {R package version 0.1.0}, url =
 {<https://cran.r-project.org/package=SpatGC>} }
 
 ## License
