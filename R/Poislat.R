@@ -17,7 +17,6 @@
 #'
 #' @return An object of class "inla" representing the fitted Poisson spatial model.
 #'         The object contains model estimates, diagnostics, and other results.
-#'
 #' @examples
 #' # Generate data from the GC spatial regression model with lattice spatial dependency
 #' W <- rAdj(500) # Generate a random adjacency matrix
@@ -39,13 +38,14 @@
 #'
 #' @importFrom spdep poly2nb
 #' @importFrom stats as.formula
+#' @importFrom sf st_make_valid
 #' @export
 Poislat <- function(Y, ID, W = NULL, shapefile = NULL, covariate = NULL,
                     family = c("gpoisson", "poisson", "zeroinflatedpoisson0", "zeroinflatedpoisson1")) {
   # Construct adjacency matrix from shapefile if provided
   if (!is.null(shapefile)) {
     W <- spdep::nb2mat(
-      neighbours = spdep::poly2nb(st_make_valid(shapefile)),
+      neighbours = spdep::poly2nb(sf::st_make_valid(shapefile)),
       style = "B", zero.policy = TRUE
     )
   }

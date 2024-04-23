@@ -20,6 +20,7 @@
 #'         The object contains model estimates, diagnostics, and other results.
 #' @importFrom spdep poly2nb
 #' @importFrom stats as.formula
+#' @importFrom sf st_make_valid
 #' @examples
 #' # Generate data from the GC spatial regression model with lattice spatial dependency
 #' W <- rAdj(500) # Generate a random adjacency matrix
@@ -45,7 +46,7 @@ NBlat <- function(Y, ID, W = NULL, shapefile = NULL, covariate = NULL,
   # Construct adjacency matrix from shapefile if provided
   if (!is.null(shapefile)) {
     W <- spdep::nb2mat(
-      neighbours = spdep::poly2nb(st_make_valid(shapefile)),
+      neighbours = spdep::poly2nb(sf::st_make_valid(shapefile)),
       style = "B", zero.policy = TRUE
     )
   }
