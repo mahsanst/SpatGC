@@ -31,9 +31,11 @@ for the model. Finally, the function calculates the precision matrix, samples fr
 the spatial random field using the A matrix and sampled values.
 }
 \examples{
+
 # Generate a spatial random field from the Matern covariance model
 # using 100 knots, variance = 1, and range = 1
-spatial_random_field <- spatGEO(m = 100, sigma = 1, range = 1)
-print(spatial_random_field)
+# (First uncomment, then run it, please)
+# spatial_random_field <- spatGEO(m = 100, sigma = 1, range = 1)
+# print(spatial_random_field)
 
 }
