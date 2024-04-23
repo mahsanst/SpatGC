@@ -17,28 +17,29 @@
 #'
 #' @return An object of class "inla" representing the fitted Poisson spatial model.
 #'         The object contains model estimates, diagnostics, and other results.
+#'
 #' @examples
 #' # Generate data from the GC spatial regression model with lattice spatial dependency
-#' W <- rAdj(500) # Generate a random adjacency matrix
-#' DDl <- rGClat(
-#'   n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
-#'   W = W, spatial = "lattice", V = 1
-#' )
+#' # (First uncomment, then run it, please)
+#' # W <- rAdj(500) # Generate a random adjacency matrix
+#' # DDl <- rGClat(n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
+#' #  W = W, spatial = "lattice", V = 1)
 #'
 #' # Prepare the data
-#' Y <- DDl$y
-#' covariate <- DDl$covariate
-#' ID <- DDl$ID
+#' # Y <- DDl$y
+#' # covariate <- DDl$covariate
+#' # ID <- DDl$ID
 #'
 #' # Fit the spatial Poisson model
-#' ResultPoisson <- Poislat(Y = Y, ID = ID, covariate = covariate, W = W, family = "poisson")
+#' # ResultPoisson <- Poislat(Y = Y, ID = ID, covariate = covariate, W = W, family = "poisson")
 #'
 #' # Summary of the model fit
-#' summary(ResultPoisson)
+#' # summary(ResultPoisson)
 #'
 #' @importFrom spdep poly2nb
 #' @importFrom stats as.formula
 #' @importFrom sf st_make_valid
+#'
 #' @export
 Poislat <- function(Y, ID, W = NULL, shapefile = NULL, covariate = NULL,
                     family = c("gpoisson", "poisson", "zeroinflatedpoisson0", "zeroinflatedpoisson1")) {

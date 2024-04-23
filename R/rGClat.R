@@ -23,30 +23,26 @@
 #'   \item{ID}{A vector of knot IDs from 1 to `n`.}
 #' }
 #' @importFrom mvtnorm rmvnorm
+#' @importFrom sf st_make_valid
+#'
 #' @examples
 #' # Generate a random adjacency matrix for a 429x429 grid
-#' W <- rAdj(429)
+#' # (First uncomment, then run it, please)
+#' # W <- rAdj(429)
 #'
 #' # Generate data from the GC spatial regression model with the specified parameters
-#' data <- rGClat(
-#'   n = 200,
-#'   alpha = 1,
-#'   beta0 = 0.3,
-#'   beta = c(-0.5, 0.5),
-#'   spatial = "ICAR",
-#'   W = W,
-#'   V = 1
-#' )
+#' # data <- rGClat(n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
+#' #  spatial = "ICAR", W = W, V = 1)
 #'
 #' # View the generated data
-#' print(data)
+#' # print(data)
 #'
 #' @export
 rGClat <- function(n = n, alpha, beta0, beta, spatial = "ICAR", W = NULL,
                    V = NULL, rho = 1, shapefile = NULL) {
   # Parameter validation and adjacency matrix generation
   if (!is.null(shapefile)) {
-    W <- spdep::nb2mat(neighbours = spdep::poly2nb(st_make_valid(shapefile)), style = "B", zero.policy = TRUE)
+    W <- spdep::nb2mat(neighbours = spdep::poly2nb(sf::st_make_valid(shapefile)), style = "B", zero.policy = TRUE)
     n <- ncol(W)
   }
   if (!is.null(W)) {
