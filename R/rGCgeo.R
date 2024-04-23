@@ -27,17 +27,12 @@
 #'
 #' @examples
 #' # Generate data from the GC spatial regression model with geospatial dependency
-#' data <- rGCgeo(
-#'   n = 100,
-#'   alpha = 1,
-#'   beta0 = 0.3,
-#'   beta = c(-0.5, 0.5),
-#'   sigma = 1,
-#'   range = 2
-#' )
+#' # (First uncomment, then run it, please)
+#' # data <- rGCgeo(n = 100, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
+#' # sigma = 1, range = 2)
 #'
 #' # View the generated data
-#' print(data)
+#' # print(data)
 #'
 #' @export
 rGCgeo <- function(n = n, alpha, beta0, beta,

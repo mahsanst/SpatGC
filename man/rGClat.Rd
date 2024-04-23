@@ -52,20 +52,14 @@ The function returns a list containing the generated data and relevant informati
 }
 \examples{
 # Generate a random adjacency matrix for a 429x429 grid
-W <- rAdj(429)
+# (First uncomment, then run it, please)
+# W <- rAdj(429)
 
 # Generate data from the GC spatial regression model with the specified parameters
-data <- rGClat(
-  n = 200,
-  alpha = 1,
-  beta0 = 0.3,
-  beta = c(-0.5, 0.5),
-  spatial = "ICAR",
-  W = W,
-  V = 1
-)
+# data <- rGClat(n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
+#  spatial = "ICAR", W = W, V = 1)
 
 # View the generated data
-print(data)
+# print(data)
 
 }

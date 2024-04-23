@@ -31,18 +31,19 @@ the specified adjacency matrix (`W`) or a shapefile of the study region.
 }
 \examples{
 # Generate data from the GC spatial regression model with lattice spatial dependency
-W <- rAdj(500) # Generate a random adjacency matrix
-DDl <- rGClat(n = 500, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5), W = W, V = 1)
+# (First uncomment, then run it, please)
+# W <- rAdj(500) # Generate a random adjacency matrix
+# DDl <- rGClat(n = 500, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5), W = W, V = 1)
 
 # Prepare the data
-Y <- DDl$y
-covariate <- DDl$covariate
-ID <- DDl$ID
+# Y <- DDl$y
+# covariate <- DDl$covariate
+# ID <- DDl$ID
 
 # Fit the spatial GC model
-ResultGC <- GClat(Y = Y, ID = ID, covariate = covariate, W = W)
+# ResultGC <- GClat(Y = Y, ID = ID, covariate = covariate, W = W)
 
 # Summary of the model fit
-summary(ResultGC)
+# summary(ResultGC)
 
 }

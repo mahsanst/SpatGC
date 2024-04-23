@@ -41,21 +41,20 @@ and fits the model using the specified adjacency matrix (`W`) or a shapefile of 
 }
 \examples{
 # Generate data from the GC spatial regression model with lattice spatial dependency
-W <- rAdj(500) # Generate a random adjacency matrix
-DDl <- rGClat(
-  n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
-  W = W, spatial = "lattice", V = 1
-)
+# (First uncomment, then run it, please)
+# W <- rAdj(500) # Generate a random adjacency matrix
+# DDl <- rGClat(n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
+#  W = W, spatial = "lattice", V = 1)
 
 # Prepare the data
-Y <- DDl$y
-covariate <- DDl$covariate
-ID <- DDl$ID
+# Y <- DDl$y
+# covariate <- DDl$covariate
+# ID <- DDl$ID
 
 # Fit the spatial Poisson model
-ResultPoisson <- Poislat(Y = Y, ID = ID, covariate = covariate, W = W, family = "poisson")
+# ResultPoisson <- Poislat(Y = Y, ID = ID, covariate = covariate, W = W, family = "poisson")
 
 # Summary of the model fit
-summary(ResultPoisson)
+# summary(ResultPoisson)
 
 }
