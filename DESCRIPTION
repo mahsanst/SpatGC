@@ -1,6 +1,6 @@
 Package: SpatGC
 Type: Package
-Title: Bayesian modeling of spatial count data
+Title: Bayesian Modeling of Spatial Count Data
 Version: 0.1.0
 Authors@R: c(
     person("Mahsa", "Nadifar", email = "mahsa.nst@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-9130-125X")),
