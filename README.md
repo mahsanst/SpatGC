@@ -8,18 +8,20 @@ month](https://cranlogs.r-pkg.org/badges/SpatGC)](https://cran.r-project.org/pac
 [![Total
 Downloads](https://cranlogs.r-pkg.org/badges/grand-total/SpatGC)](https://cran.r-project.org/package=SpatGC)
 [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+-->
 
 The R package *SpatGC* Provides a collection of functions for preparing data and fitting Bayesian count spatial regression models, with a specific focus on the Gamma-Count (GC) model. The GC model is well-suited for modeling dispersed count data, including under-dispersed or over-dispersed counts, or counts with equivalent dispersion, using Integrated Nested Laplace Approximations (INLA). The package includes functions for generating data from the GC model, as well as spatially correlated versions of the model. See [Nadifar, Baghishani, Fallah (2023)](https://link.springer.com/article/10.1007/s13253-023-00550-5)
 
 
 ## Installation
-
+<!--
 You can install the **stable** version from
 [CRAN](https://cran.r-project.org/package=SpatGC).
 
 ``` s
 install.packages('SpatGC', dependencies = TRUE)
 ```
+-->
 
 You can install the **development** version from
 [Github](https://github.com/mahsanst/SpatGC)
@@ -29,6 +31,7 @@ You can install the **development** version from
 remotes::install_github("mahsanst/SpatGC")
 ```
 
+<!--
 ## To cite package `SpatGC` in publications use:
 
 Nadifar, M., Baghishani, H. (2024) *SpatGC:
