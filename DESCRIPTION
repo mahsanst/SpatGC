@@ -15,6 +15,7 @@ LazyData: true
 RoxygenNote: 7.2.3
 Depends:
   R (>= 4.0)
+Additional_repositories: https://inla.r-inla-download.org/R/testing
 Imports:
   mvtnorm,  
   stats,
