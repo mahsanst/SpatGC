@@ -19,6 +19,8 @@ Additional_repositories: https://inla.r-inla-download.org/R/testing
 Imports:
   mvtnorm,  
   stats,
-  spdep
+  spdep,
+  sf,
+  sp (>= 1.4-5)
 Suggests:
   INLA (>= 23.06.15)
