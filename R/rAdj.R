@@ -18,12 +18,14 @@
 #' an edge (connection) between two regions.
 #'
 #' @examples
+#' \donttest{
 #' # Generate a random adjacency matrix for 5 regions with a probability of 0.3
 #' random_adj_matrix <- rAdj(5, prob = 0.3)
 #' print(random_adj_matrix)
 #'
 #' # Check if the matrix is symmetric
 #' all(random_adj_matrix == t(random_adj_matrix))
+#' }
 #'
 #' @importFrom stats rbinom
 #' @export

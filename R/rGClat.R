@@ -26,16 +26,17 @@
 #' @importFrom sf st_make_valid
 #'
 #' @examples
+#' \donttest{
 #' # Generate a random adjacency matrix for a 429x429 grid
-#' # (First uncomment, then run it, please)
-#' # W <- rAdj(429)
+#' W <- rAdj(429)
 #'
 #' # Generate data from the GC spatial regression model with the specified parameters
-#' # data <- rGClat(n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
-#' #  spatial = "ICAR", W = W, V = 1)
+#' data <- rGClat(n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
+#' spatial = "ICAR", W = W, V = 1)
 #'
 #' # View the generated data
-#' # print(data)
+#' print(data)
+#' }
 #'
 #' @export
 rGClat <- function(n = n, alpha, beta0, beta, spatial = "ICAR", W = NULL,

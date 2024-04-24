@@ -41,20 +41,23 @@ the provided covariate data and ID variables, and fits the model using the speci
 adjacency matrix (`W`) or a shapefile of the study region.
 }
 \examples{
-# Generate data from the GC spatial regression model with lattice spatial dependency
-# W <- rAdj(500) # Generate a random adjacency matrix
-# DDl <- rGClat(n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
-#  W = W, spatial = "lattice", V = 1)
 
-# Prepare the data
-# Y <- DDl$y
-# covariate <- DDl$covariate
-# ID <- DDl$ID
+\donttest{
+  # Generate data from the GC spatial regression model with lattice spatial dependency
+  W <- rAdj(500) # Generate a random adjacency matrix
+  DDl <- rGClat(n = 200, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
+  W = W, spatial = "lattice", V = 1)
 
-# Fit the spatial negative binomial model
-# ResultNB <- NBlat(Y = Y, ID = ID, covariate = covariate, W = W, family = "nbinomial")
+  # Prepare the data
+  Y <- DDl$y
+  covariate <- DDl$covariate
+  ID <- DDl$ID
 
-# Summary of the model fit
-# summary(ResultNB)
+  # Fit the spatial negative binomial model
+  ResultNB <- NBlat(Y = Y, ID = ID, covariate = covariate, W = W, family = "nbinomial")
+
+  # Summary of the model fit
+  summary(ResultNB)
+}
 
 }

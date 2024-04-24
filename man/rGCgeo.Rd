@@ -49,12 +49,14 @@ It uses a specified geospatial dependency model with parameters such as `sigma` 
 The function returns a list containing the generated data and relevant information about the simulation.
 }
 \examples{
+\donttest{
 # Generate data from the GC spatial regression model with geospatial dependency
-# (First uncomment, then run it, please)
-# data <- rGCgeo(n = 100, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
-# sigma = 1, range = 2)
+
+data <- rGCgeo(n = 100, alpha = 1, beta0 = 0.3, beta = c(-0.5, 0.5),
+sigma = 1, range = 2)
 
 # View the generated data
-# print(data)
+print(data)
+}
 
 }

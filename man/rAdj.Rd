@@ -27,11 +27,13 @@ probability. The lower triangular part is filled in by reflecting the upper tria
 part to ensure the matrix is symmetric.
 }
 \examples{
+\donttest{
 # Generate a random adjacency matrix for 5 regions with a probability of 0.3
 random_adj_matrix <- rAdj(5, prob = 0.3)
 print(random_adj_matrix)
 
 # Check if the matrix is symmetric
 all(random_adj_matrix == t(random_adj_matrix))
+}
 
 }
