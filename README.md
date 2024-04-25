@@ -16,19 +16,20 @@ The R package *SpatGC* Provides a collection of functions for preparing data and
 ## Installation
 
 You can install the **stable** version from
+
 [CRAN](https://cran.r-project.org/package=SpatGC).
 
-
+``` s
 install.packages('SpatGC', dependencies = TRUE)
-
+```
 
 You can install the **development** version from
 [Github](https://github.com/mahsanst/SpatGC)
 
-
+``` s
 # install.packages("remotes")
 remotes::install_github("mahsanst/SpatGC")
-
+``` 
 
 
 ## To cite package `SpatGC` in publications use:
